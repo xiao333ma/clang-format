@@ -1,0 +1,64 @@
+# 基于那个配置文件
+BasedOnStyle: LLVM
+# 语言: None Cpp Java Objc Protp
+Language: ObjC
+
+# 括号之后,水平对齐参数: Align DontAlign AlwaysBreak
+AlignAfterOpenBracket: Align
+# 对齐宏定义
+AlignConsecutiveMacros: true
+# 对齐尾随注释
+#AlignTrailingComments: false
+SpacesBeforeTrailingComments: 1
+
+# 对齐操作符
+AlignOperands: Align
+BreakBeforeBinaryOperators: None
+
+# 每行字符的限制，0表示没有限制  
+ColumnLimit: 150
+
+# 描述具有特殊意义的注释的正则表达式，它不应该被分割为多行或以其它方式改变
+CommentPragmas: '^ IWYU pragma:'
+
+#指针的*的挨着哪边
+PointerAlignment: Right
+
+#缩进宽度
+IndentWidth: 4
+
+# 连续的空行保留几行
+MaxEmptyLinesToKeep: 1
+
+# 在 @property 后面添加空格, \@property (readonly) 而不是 \@property(readonly).
+ObjCSpaceAfterProperty: true
+ObjCSpaceBeforeProtocolList: false
+SortIncludes: true
+
+# OC block后面的缩进
+ObjCBlockIndentWidth: 4
+
+# 是否允许短方法单行
+AllowShortFunctionsOnASingleLine: false
+
+# 中括号两边空格 [] 
+SpacesInSquareBrackets: false
+# 小括号两边添加空格
+SpacesInParentheses : false
+#等号两边的空格
+SpaceBeforeAssignmentOperators: true
+# 容器类的空格 例如 OC的字典
+SpacesInContainerLiterals: false
+#缩进
+IndentWrappedFunctionNames: true
+#在block从空行开始
+KeepEmptyLinesAtTheStartOfBlocks: true
+#在构造函数初始化时按逗号断行，并以冒号对齐
+BreakConstructorInitializersBeforeComma: true
+#括号后添加空格
+SpaceAfterCStyleCast: false
+# 缩进case 标签
+IndentCaseLabels: true 
+#tab键盘的宽度
+TabWidth: 4
+UseTab: Never
