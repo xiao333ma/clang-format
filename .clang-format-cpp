@@ -1,7 +1,29 @@
-# 基于那个配置文件
+Language: Cpp
 BasedOnStyle: LLVM
-# 语言: None Cpp Java Objc Protp
-Language: ObjC
+
+
+# 自动识别代码中的指针对齐方式，如果希望强制统一，则可以改为 false
+DerivePointerAlignment: true
+
+IncludeBlocks: Preserve
+
+# 让 #if/#else/#endif 宏中的内容保持缩进，比如：
+#   #if defined(WIN)
+#   #  include <windows.h>
+#   #else
+#   #  include <curl.h>
+#   #endif
+IndentPPDirectives: AfterHash
+
+# 解决 Issue 148: 不特殊看待 foreach 宏
+ForEachMacros: ['']
+
+# 行注释 "//" 前增加两个空格
+SpacesBeforeTrailingComments: 2
+SpacesInLineCommentPrefix:
+  Minimum: 2
+  Maximum: -1
+
 
 # 括号之后,水平对齐参数: Align DontAlign AlwaysBreak
 AlignAfterOpenBracket: Align
@@ -9,21 +31,13 @@ AlignAfterOpenBracket: Align
 AlignConsecutiveMacros: true
 # 对齐尾随注释
 #AlignTrailingComments: false
-SpacesBeforeTrailingComments: 2
-
-# 如果是 // asdf 是 OK 的
-# 但如果是 // 中文 这样是不行的。。。。
-
-SpacesInLineCommentPrefix:
-  Minimum: 1
-  Maximum: -1
 
 # 对齐操作符
 AlignOperands: Align
 BreakBeforeBinaryOperators: None
 
 # 每行字符的限制，0表示没有限制  
-ColumnLimit: 150
+ColumnLimit: 120
 
 # 描述具有特殊意义的注释的正则表达式，它不应该被分割为多行或以其它方式改变
 CommentPragmas: '^ IWYU pragma:'
@@ -37,13 +51,7 @@ IndentWidth: 4
 # 连续的空行保留几行
 MaxEmptyLinesToKeep: 1
 
-# 在 @property 后面添加空格, \@property (readonly) 而不是 \@property(readonly).
-ObjCSpaceAfterProperty: true
-ObjCSpaceBeforeProtocolList: false
 SortIncludes: false
-
-# OC block后面的缩进
-ObjCBlockIndentWidth: 4
 
 # 是否允许短方法单行
 AllowShortFunctionsOnASingleLine: false
