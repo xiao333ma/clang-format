@@ -8,7 +8,7 @@ format() {
 
 
 
-cp .clang-format $1/.clang-format
+cp .clang-format-oc $1/.clang-format
 
 cd $1
 
